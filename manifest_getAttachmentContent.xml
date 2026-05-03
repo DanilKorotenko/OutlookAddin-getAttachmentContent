@@ -10,8 +10,8 @@
     <Version>1.0</Version>
     <ProviderName>ACME</ProviderName>
     <DefaultLocale>en-us</DefaultLocale>
-    <DisplayName DefaultValue="Outlook Addin" />
-    <Description DefaultValue="Outlook Addin" />
+    <DisplayName DefaultValue="GetAttachmentContent test" />
+    <Description DefaultValue="GetAttachmentContent test" />
 
     <IconUrl DefaultValue="https://danilkorotenko.github.io/OutlookAddin-getAttachmentContent/sample_64x64.png"/>
     <HighResolutionIconUrl DefaultValue="https://danilkorotenko.github.io/OutlookAddin-getAttachmentContent/sample_128x128.png"/>

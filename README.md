@@ -12,8 +12,8 @@ Attachments content cannot be obtained.
 Steps To Reproduce
 ------------------
 1. Install manifest: [Manifest](/manifest.xml)
-2. Try to send any message to any address.
-3. Look at notification message and its action button.
+2. Send any message with attachment.
+3. Look at addin logs.
 
 Actual Result
 -------------
