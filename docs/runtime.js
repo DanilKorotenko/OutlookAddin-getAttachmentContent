@@ -81,7 +81,7 @@ async function validateMessage(event)
             })
             .catch((error) =>
             {
-                console.error("Obtain attachment error:", error);
+                console.log(`Obtain attachment error: ${JSON.stringify(error)}`);
             });
         attachmentsPromises.push(attachmentPromise);
     }
