@@ -1,12 +1,12 @@
 Prerequisites
 -------------
-Addin code is hosted on: https://danilkorotenko.github.io/OutlookAddin-SimpleBlock-ShowTaskPane/index.html
+Addin code is hosted on: https://danilkorotenko.github.io/OutlookAddin-getAttachmentContent/index.html
 
 [Manifest](/manifest.xml)
 
 Issue Description
 -----------------
-Insight message notification action button is outside user focus area and visually unnoticable in outlook on the web.
+Attachments content cannot be obtained.
 
 
 Steps To Reproduce
