@@ -75,7 +75,7 @@ async function validateMessage(event)
 
         console.log(`Attachment ID: ${attachInfo.id}. Name: ${attachInfo.name}, size: ${attachInfo.size}, type:${attachInfo.attachmentType}`);
 
-        let attachmentPromise = await obtainAttachmentContent(attachInfo.id)
+        let attachmentPromise = obtainAttachmentContent(attachInfo.id)
             .then((attachmentContent) =>
             {
                 console.log(`Got attachment: name: ${attachmentContent.name} content length: ${attachmentContent.content.length}`);
