@@ -48,11 +48,11 @@ function obtainAttachmentContent(anId)
         });
 }
 
-function validateMessage(event)
+async function validateMessage(event)
 {
     console.log("Start validation stream");
 
-    const attachmentsInfo = obtainAttachmentsInfo();
+    const attachmentsInfo = await obtainAttachmentsInfo();
 
     if (!attachmentsInfo || attachmentsInfo.length == 0)
     {
@@ -74,7 +74,7 @@ function validateMessage(event)
 
         console.log(`Attachment ID: ${attachInfo.id}. Name: ${attachInfo.name}, size: ${attachInfo.size}, type:${attachInfo.attachmentType}`);
 
-        let attachmentPromise = obtainAttachmentContent(attachInfo.id)
+        let attachmentPromise = await obtainAttachmentContent(attachInfo.id)
             .then((attachmentContent) =>
             {
                 console.log(`Got attachment: name: ${attachmentContent.name} content length: ${attachmentContent.content.length}`);
