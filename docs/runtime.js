@@ -36,6 +36,7 @@ function obtainAttachmentContent(anId)
                 anId,
                 function(asyncResult)
                 {
+                    console.log("Obtain attchament content result: " + JSON.stringify(asyncResult));
                     if (asyncResult.status === Office.AsyncResultStatus.Succeeded)
                     {
                         resolve(asyncResult.value);
