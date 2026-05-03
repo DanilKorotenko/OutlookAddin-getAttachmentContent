@@ -32,7 +32,7 @@ async function obtainAttachmentContent(anId)
         (resolve, reject) =>
         {
             console.log("Obtain attchament content: " + anId);
-            this.mailboxItem.getAttachmentContentAsync(
+            mailboxItem.getAttachmentContentAsync(
                 anId,
                 function(asyncResult)
                 {
