@@ -6,7 +6,7 @@ Office.initialize = function (reason)
     mailboxItem = Office.context.mailbox.item;
 };
 
-function obtainAttachmentsInfo()
+async function obtainAttachmentsInfo()
 {
     return new Promise(
         (resolve, reject) =>
@@ -26,7 +26,7 @@ function obtainAttachmentsInfo()
         });
 }
 
-function obtainAttachmentContent(anId)
+async function obtainAttachmentContent(anId)
 {
     return new Promise(
         (resolve, reject) =>
@@ -63,8 +63,6 @@ async function validateMessage(event)
 
     const attachmentsInfoJSON = JSON.stringify(attachmentsInfo);
 
-    let attachmentsPromises = [];
-
     for (let i = 0; i < attachmentsInfo.length; i++)
     {
         const attachInfo = attachmentsInfo[i];
@@ -75,7 +73,7 @@ async function validateMessage(event)
 
         console.log(`Attachment ID: ${attachInfo.id}. Name: ${attachInfo.name}, size: ${attachInfo.size}, type:${attachInfo.attachmentType}`);
 
-        let attachmentPromise = obtainAttachmentContent(attachInfo.id)
+        await obtainAttachmentContent(attachInfo.id)
             .then((attachmentContent) =>
             {
                 console.log(`Got attachment: name: ${attachmentContent.name} content length: ${attachmentContent.content.length}`);
@@ -84,10 +82,7 @@ async function validateMessage(event)
             {
                 console.log(`Obtain attachment error: ${JSON.stringify(error)}`);
             });
-        attachmentsPromises.push(attachmentPromise);
     }
-
-    Promise.all(attachmentsPromises);
 
     event.completed({ allowEvent: true, });
     return;
