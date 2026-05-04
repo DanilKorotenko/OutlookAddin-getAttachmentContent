@@ -17,14 +17,15 @@ Steps To Reproduce
 
 Actual Result
 -------------
-On Mac, notification message action button looks good and is in user focus area.
-![](/screenshot_mac.png)
 
-On Web version, the action button is somewhere far from user focus area, especially on wide screens.
-
-![](/screenshot_web.png)
-
+Log message in logs
+```
+Obtain attachment error: OSF.DDA.Error {name: 'InvalidAttachmentId', message: 'The attachment ID was invalid.', code: 9003}
+```
 
 Expected result
 ---------------
-On Web version, the action button is placed near notification message.
+Log message in logs
+```
+Obtain attachment error: OSF.DDA.Error {name: 'InvalidAttachmentId', message: 'The attachment ID was invalid.', code: 9003}
+```

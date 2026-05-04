@@ -36,7 +36,6 @@ async function obtainAttachmentContent(anId)
                 anId,
                 function(asyncResult)
                 {
-                    console.log("Obtain attchament content result: " + JSON.stringify(asyncResult));
                     if (asyncResult.status === Office.AsyncResultStatus.Succeeded)
                     {
                         resolve(asyncResult.value);
@@ -76,11 +75,11 @@ async function validateMessage(event)
         await obtainAttachmentContent(attachInfo.id)
             .then((attachmentContent) =>
             {
-                console.log(`Got attachment: name: ${attachmentContent.name} content length: ${attachmentContent.content.length}`);
+                console.log("Got attachment: " + JSON.stringify(attachmentContent));
             })
             .catch((error) =>
             {
-                console.log(`Obtain attachment error: ${JSON.stringify(error)}`);
+                console.error("Obtain attachment error: ", error);
             });
     }
 
