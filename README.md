@@ -27,5 +27,5 @@ Expected result
 ---------------
 Log message in logs
 ```
-Obtain attachment error: OSF.DDA.Error {name: 'InvalidAttachmentId', message: 'The attachment ID was invalid.', code: 9003}
+Got attachment: {\"content\":...
 ```
