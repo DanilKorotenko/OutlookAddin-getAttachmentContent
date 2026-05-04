@@ -6,7 +6,7 @@ Addin code is hosted on: https://danilkorotenko.github.io/OutlookAddin-getAttach
 
 Issue Description
 -----------------
-Attachments content cannot be obtained.
+getAttachmentContentAsync fails with error: InvalidAttachmentId
 
 
 Steps To Reproduce
